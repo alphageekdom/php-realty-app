@@ -16,7 +16,7 @@
 
             <div class="container">
                 <div class="header__logo">
-                    A|G Realty
+                    A<span>|</span>G Realty
                 </div>
 
                 <div class="header__menu">

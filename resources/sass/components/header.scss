@@ -11,6 +11,9 @@
         font-weight: 700;
         text-align: center;
         text-transform: uppercase;
+        span {
+            color: #00a6ff;
+        }
     }
     &__menu {
         display: flex;
@@ -25,7 +28,7 @@
 
         &:hover,
         &--active {
-            background-color: #234dd4;
+            background-color: #00a6ff;
             color: white;
         }
     }
@@ -42,8 +45,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid #234dd4;
-        color: #234dd4;
+        border: 1px solid #00a6ff;
+        color: #00a6ff;
         margin-right: 1.5rem;
     }
 }
