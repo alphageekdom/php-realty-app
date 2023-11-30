@@ -1,6 +1,6 @@
-@import "./base/reset";
-@import "./base/utilities";
+@import "./base/_reset";
+@import "./base/_utilities";
 @import "./base/_variables";
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 @import "./layouts/main-layout";
 @import "./components/header";
