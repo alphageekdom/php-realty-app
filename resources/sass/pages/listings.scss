@@ -40,7 +40,7 @@
             justify-content: center;
             align-items: center;
             border-radius: 5px;
-            border: 1px solid rgb(245, 246, 247);
+            border: 1px solid rgb(205, 209, 212);
             margin-right: 0.5rem;
             cursor: pointer;
             font-weight: 600;
@@ -61,6 +61,53 @@
 
         .fa-caret-down {
             margin-left: 1rem;
+        }
+    }
+
+    .listings-properties {
+        img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 5px;
+        }
+        &__item {
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                rgba(0, 0, 0, 0.17) 0px 12px 13px,
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            margin-bottom: 2rem;
+        }
+        &__item-price {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        &__item-details {
+            font-size: 1.1rem;
+            display: block;
+            color: #7c8791;
+            margin-bottom: 0.5rem;
+        }
+        &__item-address {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        &__item-line {
+            display: block;
+            background: #7c8791;
+            margin-bottom: 0.5rem;
+            height: 1px;
+        }
+        &__item-owner {
+            font-size: 0.9rem;
+            color: #7c8791;
         }
     }
 }
