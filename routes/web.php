@@ -19,8 +19,8 @@ Route::get('/', function () {
 });
 
 // Show All Listings
-Route::get('/{property_type}/{listing_type}', function () {
-    return view('welcome');
+Route::get('/{property_type}/{listing_type}/{city}', function () {
+    return view('pages/listings');
 });
 
 // Single Listing
