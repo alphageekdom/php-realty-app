@@ -1,5 +1,6 @@
 @extends('layouts.main')
 
+@section('page-title', 'All Properties - A|G Realty')
 @section("content")
 <div class="listings-page">
     <div class="listings-city">
