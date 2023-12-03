@@ -65,7 +65,7 @@
                     <div class="listing-extras__details">
                         <h2>More Info</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto magnam sed veritatis odit at. Impedit accusamus autem incidunt totam fugit, ipsa doloremque provident pariatur voluptas deleniti nostrum minima, nisi ex!</p>
-                        <h3>Details</h3>
+                        <h3>Extras</h3>
                         <ul>
                             <li>Test</li>
                             <li>Test</li>
