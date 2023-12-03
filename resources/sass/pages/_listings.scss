@@ -73,12 +73,19 @@
             border-radius: 5px;
         }
         &__item {
+            display: block;
             padding: 10px;
             border-radius: 5px;
             box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
                 rgba(0, 0, 0, 0.22) 0px 15px 12px;
             margin-bottom: 2rem;
             position: relative;
+            color: #1b1b1b;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                color: #00a6ff;
+            }
         }
         &__item-saved {
             width: 40px;
