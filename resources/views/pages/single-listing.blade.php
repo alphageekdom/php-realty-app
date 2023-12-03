@@ -8,10 +8,28 @@
         <div class="listing-top__form-wrapper">
           <div class="container">
             <form action="" class="listing-top__form">
-                <span class="listing-top__form-title">Schedule A Tour</span>
+                <label class="listing-top__form-label">Schedule A Tour</label>
                 <div class="listing-top__form-group listing-top__form-group--horizontal">
                     <div class="listing-top__form-option">In-Person</div>
                     <div class="listing-top__form-option">Video</div>
+                </div>
+                <label class="listing-top__form-label">Date</label>
+                <div class="listing-top__form-group">
+                    <div class="listing-top__form-option">10 / 12 / 2030</div>
+                </div>
+                <label class="listing-top__form-label">Time</label>
+                <div class="listing-top__form-group">
+                    <div class="listing-top__form-option">11 AM PST</div>
+                </div>
+                <label class="listing-top__form-label">Personal Info</label>
+                <div class="listing-top__form-group">
+                    <div class="listing-top__form-option">Phone Number</div>
+                </div>
+                <div class="listing-top__form-group">
+                    <div class="listing-top__form-option">Email</div>
+                </div>
+                <div class="listing-top__form-group">
+                    <button type="submit" class="listing-top__form-button">Schedule</button>
                 </div>
             </form>
           </div>
