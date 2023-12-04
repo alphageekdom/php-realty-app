@@ -40,6 +40,11 @@ Route::get('/account/show-status', function () {
     return view('pages/show-status');
 })->name('show-status');
 
+// Admin Dashboard
+Route::get('/admin', function () {
+    return view('admin/dashboard');
+})->name('show-status');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Route::get('/dashboard', function () {
