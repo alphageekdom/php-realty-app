@@ -32,6 +32,10 @@
         flex-direction: column;
         margin-bottom: 1rem;
     }
+    &__form-group a {
+        text-decoration: none;
+        color: #7c8791;
+    }
     &__form-label {
         font-weight: 700;
         font-size: 0.9rem;
@@ -43,7 +47,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 4px;
+        // border-radius: 4px;
         border: none;
         border-bottom: 1px solid rgb(205, 209, 212);
         margin-right: 0.5rem;

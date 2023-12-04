@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 // Homepage
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('pages/home');
 });
 
@@ -29,12 +31,12 @@ Route::get('/{property_type}/{listing_type}/{city}', function () {
 });
 
 // User Login
-Route::get('/login', function () {
+Route::get('/home/login', function () {
     return view('pages/login');
 });
 
 // User Register
-Route::get('/register', function () {
+Route::get('/home/register', function () {
     return view('pages/register');
 });
 
@@ -49,3 +51,15 @@ Route::get('/account/show-status', function () {
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';

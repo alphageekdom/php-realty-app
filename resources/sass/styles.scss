@@ -10,3 +10,9 @@
 @import "./pages/show-status";
 @import "./pages/auth";
 @import "./pages/single-listing";
+
+.error-sub-text {
+    padding: 10px;
+    color: red;
+    font-size: 0.8rem;
+}
