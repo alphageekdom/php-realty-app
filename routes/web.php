@@ -14,6 +14,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::group([
+    'prefix' => 'admin',
+    'as' => 'admin.'
+], function() {
+    // Admin Dashboard
+    Route::get('/', function () {
+        return view('admin/dashboard');
+    })->name('dashboard');
+
+    Route::group([
+        'prefix' => 'listings',
+        'as' => 'listings.'
+    ], function() {
+        // All Listings
+        Route::get('/', [\App\Http\Controllers\Admin\ListingController::class, 'index'])->name('index');
+
+        // Create Listing
+        Route::get('/create', [\App\Http\Controllers\Admin\ListingController::class, 'create'])->name('create');
+
+        // Create Listing
+        Route::get('/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
+    });
+});
+
 
 // Homepage
 Route::get('/', function () {
@@ -48,15 +72,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::group([
-    'prefix' => 'admin',
-    'as' => 'admin.'
-], function() {
-    // Admin Dashboard
-    Route::get('/', function () {
-        return view('admin/dashboard');
-    })->name('dashboard');
-});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
