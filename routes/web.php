@@ -34,6 +34,9 @@ Route::group([
         Route::get('/create', [\App\Http\Controllers\Admin\ListingController::class, 'create'])->name('create');
 
         // Create Listing
+        Route::post('/', [\App\Http\Controllers\Admin\ListingController::class, 'store'])->name('store');
+
+        // Create Listing
         Route::get('/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
     });
 });
