@@ -38,10 +38,6 @@
     &__account {
         display: flex;
         align-items: center;
-
-        &-link {
-            text-decoration: none;
-        }
     }
 
     &__account-link {
@@ -54,5 +50,11 @@
         border: 1px solid #00a6ff;
         color: #00a6ff;
         margin-right: 1.5rem;
+        text-decoration: none;
+
+        &--anchor {
+            margin-right: 1.5rem;
+            text-decoration: none;
+        }
     }
 }

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // Homepage
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('pages/home');
 });
 
@@ -28,33 +28,23 @@ Route::get('/listing/{slug}/{id}', function () {
 // Show All Listings
 Route::get('/{property_type}/{listing_type}/{city}', function () {
     return view('pages/listings');
-});
-
-// User Login
-Route::get('/home/login', function () {
-    return view('pages/login');
-});
-
-// User Register
-Route::get('/home/register', function () {
-    return view('pages/register');
-});
+})->name('listings');
 
 // User Saved Listings
-Route::get('/account/saved', function () {
+Route::get('/account', function () {
     return view('pages/saved-listings');
-});
+})->name('account');
 
 // User Show Status
 Route::get('/account/show-status', function () {
     return view('pages/show-status');
-});
+})->name('show-status');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
