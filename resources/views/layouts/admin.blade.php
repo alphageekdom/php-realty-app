@@ -91,7 +91,7 @@
 
         <div>
             <!-- #Left Sidebar ==================== -->
-            <div class="sidebar">
+            <div class="sidebar" style="background: #28282B; color:#FAF9F6;">
                 <div class="sidebar-inner">
                     <!-- ### $Sidebar Header ### -->
                     <div class="sidebar-logo">
@@ -105,7 +105,7 @@
                                             </div>
                                         </div>
                                         <div class="peer peer-greed">
-                                            <h5 class="lh-1 mB-0 logo-text">Adminator</h5>
+                                            <h5 class="lh-1 mB-0 logo-text" style="color: #FAF9F6;">A<span style="color: #00a6ff;">|</span>G Realty</h5>
                                         </div>
                                     </div>
                                 </a>
@@ -127,7 +127,7 @@
                                 <span class="icon-holder">
                                     <i class="c-blue-500 ti-home"></i>
                                 </span>
-                                <span class="title">Dashboard</span>
+                                <span class="title" style="color: #FAF9F6;">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item dropdown">
@@ -135,20 +135,20 @@
                                 <span class="icon-holder">
                                     <i class="c-orange-500 ti-layout-list-thumb"></i>
                                 </span>
-                                <span class="title">Property Listings</span>
+                                <span class="title" style="color: #FAF9F6;">Property Listings</span>
                                 <span class="arrow">
                                     <i class="ti-angle-right"></i>
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="sidebar-link" href="{{ route('admin.listings.create') }}">Create New Listing</a>
+                                    <a class="sidebar-link" href="{{ route('admin.listings.create') }}" style="color: #FAF9F6;">Create New Listing</a>
                                 </li>
                                 <li>
-                                    <a class="sidebar-link" href="{{ route('admin.listings.index') }}">Show All Listings</a>
+                                    <a class="sidebar-link" href="{{ route('admin.listings.index') }} " style="color: #FAF9F6;">Show All Listings</a>
                                 </li>
                                 <li>
-                                    <a class="sidebar-link" href="datatable.html">Listing Tour Request</a>
+                                    <a class="sidebar-link" href="datatable.html" style="color: #FAF9F6;">Listing Tour Request</a>
                                 </li>
                             </ul>
                         </li>
