@@ -33,11 +33,11 @@ Route::group([
         // Create Listing
         Route::get('/create', [\App\Http\Controllers\Admin\ListingController::class, 'create'])->name('create');
 
-        // Create Listing
+        // Store Listing
         Route::post('/', [\App\Http\Controllers\Admin\ListingController::class, 'store'])->name('store');
 
-        // Create Listing
-        Route::get('/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
+        // Edit Listing
+        Route::get('/{slug}/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
     });
 });
 

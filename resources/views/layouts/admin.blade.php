@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
             integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-        {{-- @vite(['resources/sass/styles.scss', 'resources/js/app.js']) --}}
+        @vite(['resources/sass/styles.scss', 'resources/js/app.js'])
         <title>@yield('page-title')</title>
 
         <style>
@@ -439,6 +439,16 @@
 
                 <!-- ### $App Screen Content ### -->
                 <main class="main-content bgc-grey-100">
+                    @if(session()->has('success'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                    @if(session()->has('error'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('error') }}
+                        </div>
+                    @endif
                     @yield('content')
                 </main>
 
