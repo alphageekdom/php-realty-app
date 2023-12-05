@@ -38,6 +38,9 @@ Route::group([
 
         // Edit Listing
         Route::get('/{slug}/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
+
+        // Update Listing
+        Route::put('/{slug}/{id}', [\App\Http\Controllers\Admin\ListingController::class, 'update'])->name('update');
     });
 });
 
