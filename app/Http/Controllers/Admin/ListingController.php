@@ -124,8 +124,11 @@ class ListingController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($slug, $id)
     {
-        //
+        $listing = Listing::find($id);
+        $listing->delete();
+
+        return redirect("/admin/listings")->with('success', 'Successfully Deleted Listing');
     }
 }

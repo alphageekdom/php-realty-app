@@ -96,6 +96,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-color">Update</button>
+                    <a href="{{ route('admin.listings.destroy', ['slug' => $listing->slug, 'id' => $listing->id]) }}" onclick="return confirm('Are you sure you want to delete the listing?')" class="btn btn-danger btn-color">Delete</a>
                 </form>
             </div>
         </div>
