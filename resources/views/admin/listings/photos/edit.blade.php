@@ -145,7 +145,7 @@
                         <div class="form-group" style="display: flex; flex-direction: column; margin-top: 1rem;">
                             <a href="{{ route('admin.listings.destroy', ['slug' => $listing->slug, 'id' => $listing->id]) }}"
                                 onclick="return confirm('Are you sure you want to delete the listing?')"
-                                class="btn cur-p btn-outline-success gallery-btn" style="width: 100%; color: green" onMouseOver="this.style.color='#F8F8F8'"  onMouseOut="this.style.color='green'">Gallery</a>
+                                class="btn cur-p btn-outline-success gallery-btn">Gallery</a>
                         </div>
                         <div class="form-group" style="display: flex; flex-direction: column; margin-top: 1rem;">
                             <button type="submit" class="btn btn-primary btn-color" style="width: 100%; margin-bottom: 1rem;">Save</button>

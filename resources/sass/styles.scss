@@ -17,6 +17,25 @@
     font-size: 0.8rem;
 }
 
-img {
-    max-width: 300px;
+.photo-img {
+    max-width: 200px;
+}
+
+.btn {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.gallery-btn {
+    color: green !important;
+    &:hover {
+        color: white !important;
+    }
+}
+
+.btn-featured {
+    background: #00a6ff !important;
+    &:hover {
+        opacity: 0.8;
+    }
 }

@@ -143,15 +143,15 @@
                                 @enderror
                         </div>
                         <div class="form-group" style="display: flex; flex-direction: column; margin-top: 1rem;">
-                            <a href="{{ route('admin.listings.destroy', ['slug' => $listing->slug, 'id' => $listing->id]) }}"
-                                onclick="return confirm('Are you sure you want to delete the listing?')"
-                                class="btn cur-p btn-outline-success gallery-btn" style="width: 100%; color: green" onMouseOver="this.style.color='#F8F8F8'"  onMouseOut="this.style.color='green'">Gallery</a>
+                            <a href="{{ route('admin.listings.photos', ['slug' => $listing->slug, 'id' => $listing->id]) }}"
+                                onclick="return confirm('Did you save your updates?')"
+                                class="btn cur-p btn-outline-success gallery-btn"><i class="fa-solid fa-image"></i> Gallery</a>
                         </div>
                         <div class="form-group" style="display: flex; flex-direction: column; margin-top: 1rem;">
-                            <button type="submit" class="btn btn-primary btn-color" style="width: 100%; margin-bottom: 1rem;">Save</button>
+                            <button type="submit" class="btn btn-primary btn-color"><i class="fa-solid fa-box-archive"></i> Save</button>
                             <a href="{{ route('admin.listings.destroy', ['slug' => $listing->slug, 'id' => $listing->id]) }}"
                                 onclick="return confirm('Are you sure you want to delete the listing?')"
-                                class="btn btn-danger btn-color" style="width: 100%;">Delete</a>
+                                class="btn btn-danger btn-color"><i class="fa-solid fa-trash"></i> Delete</a>
                         </div>
                     </div>
                 </div>
