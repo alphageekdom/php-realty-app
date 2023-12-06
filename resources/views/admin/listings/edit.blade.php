@@ -108,13 +108,11 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="mb-3 col-md-6">
+                            <div class="mb-3 col-md-12">
                                 <h3>Details</h3>
                                 <label class="form-label" for="desciption">Description</label>
-                                <textarea type="text" class="form-control" name="desciption" id="desciption">
-                                    {{old('desciption', $listing->desciption)}}
-                                </textarea>
-                                @error('desciption')
+                                <textarea type="text" class="form-control" name="description" id="description" placeholder="ex. Property details...">{{old('description', $listing->description)}}</textarea>
+                                @error('description')
                                 <div class="error-sub-text">
                                     {{$message}}
                                 </div>
@@ -135,7 +133,7 @@
                                 <select name="status" id="status" class="form-control">
                                     <option value="draft" @selected(old('status', $listing->status) == 'draft') >Draft
                                     </option>
-                                    <option value="publish" @selected(old('status', $listing->status) == 'publish')>Publish
+                                    <option value="published" @selected(old('status', $listing->status) == 'published')>Published
                                     </option>
                                 </select>
                                 @error('status')
@@ -147,7 +145,7 @@
                         <div class="form-group" style="display: flex; flex-direction: column; margin-top: 1rem;">
                             <a href="{{ route('admin.listings.destroy', ['slug' => $listing->slug, 'id' => $listing->id]) }}"
                                 onclick="return confirm('Are you sure you want to delete the listing?')"
-                                class="btn cur-p btn-outline-success gallery-btn" style="width: 100%;" onmouseover="this.style.color='white'" onmouseout="this.style.color='green'">Gallery</a>
+                                class="btn cur-p btn-outline-success gallery-btn" style="width: 100%; color: green" onMouseOver="this.style.color='#F8F8F8'"  onMouseOut="this.style.color='green'">Gallery</a>
                         </div>
                         <div class="form-group" style="display: flex; flex-direction: column; margin-top: 1rem;">
                             <button type="submit" class="btn btn-primary btn-color" style="width: 100%; margin-bottom: 1rem;">Save</button>

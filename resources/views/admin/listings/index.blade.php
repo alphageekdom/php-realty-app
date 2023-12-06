@@ -28,7 +28,17 @@
                                     {{ $listing->city }}, {{ $listing->state }} {{ $listing->zipcode }}
                                     </a>
                                 </td>
-                                <td>Active</td>
+                                <td>
+                                    @if ($listing->status == 'published')
+                                        <div class="btn cur-p btn-success btn-color" style="width: 100px; text-transform: capitalize;">
+                                            {{ $listing->status }}
+                                        </div>
+                                    @else
+                                        <div class="btn cur-p btn-warnging btn-color" style="background-color: #FFAC1C; border: solid #FFAC1C; width: 100px; text-transform: capitalize;">
+                                            {{ $listing->status }}
+                                        </div>
+                                    @endif
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
