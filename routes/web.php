@@ -46,6 +46,26 @@ Route::group([
 
         // Delete Listing
         Route::get('/{slug}/{id}/delete', [\App\Http\Controllers\Admin\ListingController::class, 'destroy'])->name('destroy');
+
+        // Listing Photos //
+
+        // Show All Photos
+        Route::get('/{slug}/{id}/photos', [\App\Http\Controllers\Admin\PhotoController::class, 'index'])->name('photos');
+        
+        // Add Photos
+        Route::get('/{slug}/{id}/photos/create', [\App\Http\Controllers\Admin\PhotoController::class, 'create'])->name('photos.create');
+        
+        // Save Photos
+        Route::post('/{slug}/{id}/photos', [\App\Http\Controllers\Admin\PhotoController::class, 'store'])->name('photos.store');
+        
+        // Show Photo
+        Route::get('/{slug}/{id}/photos/{photo_id/edit}', [\App\Http\Controllers\Admin\PhotoController::class, 'edit'])->name('photos.edit');
+
+        // Update Photos
+        Route::put('/{slug}/{id}/photos', [\App\Http\Controllers\Admin\PhotoController::class, 'update'])->name('photos.update');
+
+        // Delete Photo
+        Route::get('/{slug}/{id}/photos/{photo_id/delete}', [\App\Http\Controllers\Admin\ListingController::class, 'destroy'])->name('photos.destroy');
     });
 });
 
