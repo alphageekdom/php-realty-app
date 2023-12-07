@@ -62,6 +62,7 @@ class PhotoController extends Controller
         $photo->featured = 0;
         $photo->save();
         
+        
         // $listing->slug = Helper::slugify("{$request->address}-{$request->address2}-{$request->city}-{$request->state}-{$request->zipcode}");
 
 

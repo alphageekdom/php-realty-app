@@ -5,9 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Listing;
-use App\Models\User;
+use App\Models\Photo;
 use App\Helper\Helper;
-use Illuminate\Support\Facades\DB;
 
 class ListingController extends Controller
 {

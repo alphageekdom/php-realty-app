@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Listing;
+use App\Models\Photo;
 
 class ListingController extends Controller
 {
@@ -42,8 +43,14 @@ class ListingController extends Controller
             'slug' => $slug
         ])->first();
 
-        // return $listing;
-        return view('pages/single-listing', ['listing' => $listing]);
+        $photos = Photo::where([
+            'listing_id' => $id,
+        ])->get();
+
+        return view('pages/single-listing', [
+            'listing' => $listing,
+            'photos' => $photos,
+        ]);
     }
 
     /**

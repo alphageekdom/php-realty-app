@@ -10,8 +10,8 @@
                 <form method="POST" enctype="multipart/form-data" action="{{ route('admin.listings.photos.store', ['slug' => $slug, 'id' => $id]) }}">
                     @csrf
                     <div class="mb-3">
-                        <label class="form-label" for="address">Address</label>
-                        <input type="file" name="image"/>
+                        <label class="form-label" for="address">Images</label>
+                        <input type="file" name="image" multiple/>
                         <button type="submit" class="btn btn-primary btn-color">Save Image</button>
                         @error('image')
                             <div class="error-sub-text">
