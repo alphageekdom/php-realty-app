@@ -24,7 +24,7 @@
                         @csrf
                         <a href="{{ route('logout') }}" class="header__account-link--anchor" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
                     </form>
-                    {{-- <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a> --}}
+                    {{-- <a href="{{ url('/admin') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">admin</a> --}}
                 @else
                     <a href="{{ route('login') }}" class="header__account-link--anchor login">Login</a>
                     @if (Route::has('register'))

@@ -10,6 +10,78 @@
                 <form method="POST" action="{{ route('admin.listings.store') }}">
                     @csrf
                     <div class="mb-3">
+                        <label class="form-label" for="price">Price</label>
+                        <input type="text" class="form-control" name="price" id="price" placeholder="ex. $500,000.00" value="{{old('price')}}">
+                        @error('price')
+                            <div class="error-sub-text">
+                                {{$message}}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="property_type">Property Type</label>
+                        <select name="property_type" id="property_type" class="form-control">
+                            <option value="home" 
+                            @if (old('property_type') == 'home')
+                                selected
+                            @endif>Home</option>
+                            <option value="condo"
+                            @if (old('property_type') == 'condo')
+                                selected
+                            @endif
+                            >Condo</option>
+                            <option value="studio"
+                            @if (old('property_type') == 'studio')
+                                selected
+                            @endif
+                            >Studio</option>
+                            <option value="apartment"
+                            @if (old('property_type') == 'apartment')
+                                selected
+                            @endif
+                            >Apartment</option>
+                            <option value="penthouse"
+                            @if (old('property_type') == 'penthouse')
+                                selected
+                            @endif
+                            >Penthouse</option>
+                        </select>
+                        @error('property_type')
+                            <div class="error-sub-text">
+                                {{$message}}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="listing_type">Listing Type</label>
+                        <select name="listing_type" id="listing_type" class="form-control">
+                            <option value="for_sale" 
+                            @if (old('listing_type') == 'for_sale')
+                                selected
+                            @endif>For Sale</option>
+                            <option value="for_rent"
+                            @if (old('listing_type') == 'for_rent')
+                                selected
+                            @endif
+                            >For Rent</option>
+                            <option value="short_term_rental"
+                            @if (old('listing_type') == 'short_term_rental')
+                                selected
+                            @endif
+                            >Short-Term Rental</option>
+                            <option value="vacation_rental"
+                            @if (old('listing_type') == 'vacation_rental')
+                                selected
+                            @endif
+                            >Vacation Rental</option>
+                        </select>
+                        @error('listing_type')
+                            <div class="error-sub-text">
+                                {{$message}}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
                         <label class="form-label" for="address">Address</label>
                         <input type="text" class="form-control" name="address" id="address" placeholder="ex.  1234 Main St" value="{{old('address')}}">
                         @error('address')

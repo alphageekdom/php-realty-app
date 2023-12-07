@@ -39,13 +39,15 @@ class ListingController extends Controller
 
         request()->validate([
             'address' => 'required',
-            'address2' => 'required',
             'city' => 'required',
             'state' => 'required',
             'zipcode' => 'required|integer',
             'bedrooms' => 'required|integer',
             'bathrooms' => 'required|integer',
             'squarefootage' => 'required|integer',
+            'price' => 'required|decimal:2',
+            'property_type' => 'required',
+            'listing_type' => 'required',
         ]);
 
         $listing = new Listing();
@@ -58,7 +60,12 @@ class ListingController extends Controller
         $listing->bedrooms = $request->get('bedrooms');
         $listing->bathrooms = $request->get('bathrooms');
         $listing->squarefootage = $request->get('squarefootage');
-        $listing->status = 'draft';
+        $listing->price = $request->get('price');
+        $listing->property_type = $request->get('property_type');
+        $listing->listing_type = $request->get('listing_type');
+        
+        $listing->published = 0;
+        $listing->status = 'on-market';
         
         $listing->slug = Helper::slugify("{$request->address}-{$request->address2}-{$request->city}-{$request->state}-{$request->zipcode}");
 
@@ -100,13 +107,15 @@ class ListingController extends Controller
     {
         request()->validate([
             'address' => 'required',
-            'address2' => 'required',
             'city' => 'required',
             'state' => 'required',
             'zipcode' => 'required|integer',
             'bedrooms' => 'required|integer',
             'bathrooms' => 'required|integer',
             'squarefootage' => 'required|integer',
+            'price' => 'required|decimal:2',
+            'property_type' => 'required',
+            'listing_type' => 'required',
         ]);
 
         $listing = Listing::where([
@@ -126,8 +135,14 @@ class ListingController extends Controller
         $listing->bedrooms = $request->get('bedrooms');
         $listing->bathrooms = $request->get('bathrooms');
         $listing->squarefootage = $request->get('squarefootage');
-        $listing->status = $request->get('status');
+        
+        $listing->published = $request->get('published');
+        $listing->status = 'on-market';
+        
         $listing->description = $request->get('description');
+        $listing->price = $request->get('price');
+        $listing->property_type = $request->get('property_type');
+        $listing->listing_type = $request->get('listing_type');
         
         $listing->slug = Helper::slugify("{$request->address}-{$request->address2}-{$request->city}-{$request->state}-{$request->zipcode}");
 
